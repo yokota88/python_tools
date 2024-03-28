@@ -47,12 +47,12 @@ class Utility:
     for k, v in types.items():
       if(k.lower()=="sma"):
         for span in v:
-          col_name = 'sma' + str(span)
+          col_name = 'indicator_sma' + str(span)
           df_out[col_name] = Utility.calcSMA(data=df, window_size=span)
           
       elif(k.lower()=="ema"):
         for span in v:
-          col_name = 'ema'+ str(span)
+          col_name = 'indicator_ema'+ str(span)
           df_out[col_name] = Utility.calcEMA(data=df, window_size=span)
         
     return df_out
